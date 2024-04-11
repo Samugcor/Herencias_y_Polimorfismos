@@ -10,9 +10,14 @@ public class Moto extends Vehiculo{
     }
 
     @Override
+    public String toString() {
+        return "Moto con matricula:" + matricula + ", Color:" + color + " y  Marca:" + marca +"\nEstado de las piezas:\n Apoyo:" + apoyo + "\nTubo de Escape:" + tuboEscape 
+                + "\nContacto:" + contacto + "\nRodamiento:" + rodamiento + "\nAsiento:" + asiento;
+    }
+
+    @Override
     public void modificarDato(Funciones fun){
         int dato=fun.getInputInt("Elija el dato que desee modificar: \n1.Matricula\n2.Color\n3.Marca\n4.Reportar averia");
-        fun.getInputString("");
         fun.cleanInputBuffer();
 
         switch (dato) {

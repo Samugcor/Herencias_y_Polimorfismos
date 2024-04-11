@@ -8,11 +8,19 @@ public class Tractor extends Vehiculo {
     public Tractor(String matricula, String color, String marca) {
         super(matricula, color, marca);
     }
+    
+
+    @Override
+    public String toString() {
+        return "Tractor con matricula:" + matricula + ", color:" + color + " y marca:" + marca + "\nEstado de las piezas:\n remolque:" + remolque +  "\n chimenea:"
+                + chimenea +  "\n parabrisas:" + parabrisas + "\n filtroGases:" + filtroGases
+                + "\n deposito:" + deposito;
+    }
+
 
     @Override
     public void modificarDato(Funciones fun){
         int dato=fun.getInputInt("Elija el dato que desee modificar: \n1.Matricula\n2.Color\n3.Marca\n4.Reportar averia");
-        fun.getInputString("");
         fun.cleanInputBuffer();
 
         switch (dato) {

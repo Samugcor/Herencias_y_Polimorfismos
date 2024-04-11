@@ -10,6 +10,7 @@ public class App {
        
         Funciones fun = new Funciones();
         int opcion;
+        int vehiculoSeleccionado;
 
         while (true) {
             System.out.println("\n1.Ingresar Vehiculo\n2.Cambiar dato\n3.Mostrar información de vehiculo\n4.Salir");
@@ -51,7 +52,7 @@ public class App {
                     }
                     break;
             
-                default:
+                
                 case 2:
                     System.out.println("\nLista de vehiculos en taller: ");
 
@@ -59,8 +60,26 @@ public class App {
                         System.out.println((vehiculosEnTaller.indexOf(vehiculo)+1) +". "+vehiculo.getMatricula()+", "+vehiculo.getClass().getSimpleName());
                     }
 
-                    int vehiculoSeleccionado= fun.getInputInt("Escoja uno de los vehiculos anteriores: ");
+                    vehiculoSeleccionado= fun.getInputInt("Escoja uno de los vehiculos anteriores: ");
                     vehiculosEnTaller.get(vehiculoSeleccionado-1).modificarDato(fun);
+                    break;
+
+                case 3:
+                    System.out.println("\nLista de vehiculos en taller: ");
+
+                    for (Vehiculo vehiculo : vehiculosEnTaller) {
+                        System.out.println((vehiculosEnTaller.indexOf(vehiculo)+1) +". "+vehiculo.getMatricula()+", "+vehiculo.getClass().getSimpleName());
+                    }
+                    vehiculoSeleccionado= fun.getInputInt("Escoja uno de los vehiculos anteriores: ");
+                    System.out.println(vehiculosEnTaller.get(vehiculoSeleccionado-1).toString());
+                    break;
+                    
+                case 4: 
+                    System.out.println("Saliendo...");
+                    System.exit(0);
+                    break;
+                default:
+                System.err.println("Opcion no valida");
                     break;
             }
         }
@@ -68,5 +87,4 @@ public class App {
     }
 }
 
-//System.out.println("Saliendo...");
-//System.exit(0);
+
