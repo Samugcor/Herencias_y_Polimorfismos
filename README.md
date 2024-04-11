@@ -12,4 +12,4 @@ Un taller puede recibir distintos tipos de vehiculo (coches, motos, camiones, tr
 Si, no hay motivo por lo que esto no pieda ser posible. Estaríamos ante un caso de herencia múltiple.
 
 **¿Puede ocurrir que una clase herede de dos clases padre? ¿Por qué?**
-En Java esto no es posible, una clase solo heredará de una superclase. Sin embargo, es posible que otros lenguas ofrezcan esta posibilidad.
+En Java esto no es posible, una subclase solo heredará de una superclase. Sin embargo, es posible que otros lenguas ofrezcan esta posibilidad.
