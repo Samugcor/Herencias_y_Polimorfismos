@@ -15,6 +15,7 @@ public class Vehiculo {
 
     public void modificarDato(Funciones fun){
         int dato=fun.getInputInt("Elija el dato que desee modificar: \n1.Matricula\n2.Color\n3.Marca");
+        fun.getInputString("");
         switch (dato) {
             case 1:
                 this.matricula=fun.getInputString("Introduzca nueva metricula: ");
