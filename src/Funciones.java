@@ -12,4 +12,7 @@ public class Funciones {
         System.out.println(pregunta);
         return scanner.nextInt();
     }
+    public void cleanInputBuffer(){
+        scanner.nextLine();
+    }
 }
